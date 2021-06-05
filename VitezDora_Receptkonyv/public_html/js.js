@@ -1,7 +1,17 @@
 $(function(){    
-    $.ajax({url: "receptek.json", success: function(result){ receptekTomb=(result); kiir();}});
     $("article").on("click","tr",megjelenit);
-});
+    
+     $.ajax(
+            {url: "etelek.json", success: function (result) {
+                    console.log(result);
+                    receptekTomb = result;  //a beolvasott JSN file tartalmát egy etelekTombbe mentem
+//                   
+                     kiir();
+                    
+//                    
+                }});
+  
+    });
 
 var receptekTomb=[];
 
