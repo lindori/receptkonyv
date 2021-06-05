@@ -1,14 +1,13 @@
 $(function(){    
     $("article").on("click","tr",megjelenit);
+    kiir();
     
      $.ajax(
             {url: "etelek.json", success: function (result) {
                     console.log(result);
-                    receptekTomb = result;  //a beolvasott JSN file tartalmát egy etelekTombbe mentem
-//                   
+                    receptekTomb = result;  
                      kiir();
-                    
-//                    
+                                  
                 }});
   
     });
