@@ -1,5 +1,5 @@
 $(function(){    
-    $("article").on("click","tr",megjelenit);
+    $("article").on("click","p",megjelenit);
     kiir();
     
      $.ajax(
