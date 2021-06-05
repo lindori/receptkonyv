@@ -3,7 +3,6 @@
     "neve":"somlói galuska",
     "elkeszitesiido":"30 perc",
     "eleresiut":"kepek/somloi.jpg",
-    "leiras":"így kell elkészíteni a somlóit",
     "kategoria" : "edesseg",
     "ar": "1000ft"
 },
@@ -11,8 +10,21 @@
     "neve":"zsíros kenyér",
     "elkeszitesiido":"3 perc",
     "eleresiut":"kepek/zsirosk.jpg",
-    "leiras":"így kell elkészíteni a zsíros kenyeret",
      "kategoria": "eloetel",
      "ar": "1500ft"
+},
+{
+    "neve":"kakaos csiga",
+    "elkeszitesiido":"10 perc",
+    "eleresiut":"kepek/kakaoscsiga.jpg",
+     "kategoria": "reggeli",
+     "ar": "500ft"
+},
+{
+    "neve":"pörkölt",
+    "elkeszitesiido":"30 perc",
+    "eleresiut":"kepek/porkolt.jpg",
+     "kategoria": "foetel",
+     "ar": "2000ft"
 }
 ]

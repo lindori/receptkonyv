@@ -6,32 +6,21 @@ $(function(){
 var receptekTomb=[];
 
 function kiir(){
-	$("article").eq(1).empty();
-    $("article").append("<table>");
-    $("article table").append("<tr><th>Név</th><th>Elkészítési idő</th><th>Elérési út</th><th>Leírás</th><th>Kategoria</th><th>Ar</th></tr>");
-//    for (var item in receptekTomb[0]) {
-//        $("article table tr").append("<th id='" + item + "'>" + item + " </th>"); 
-//    }
+    $("article").empty();
+    for (var item in receptekTomb) {
+        var etelekFelvet ="<p><b>eve</b>: "+receptekTomb[item]["nev"]+"</p>\n\
+                          <p><b>kategória</b>: "+receptekTomb[item]["kategoria"]+"</p>\n\
+                          <p><b>elkészítési idő</b>: "+receptekTomb[item]["elkeszitesi_ido"]+"</p>\n\
+                           <img src='" + receptekTomb[item]['eleresi_ut'] + "' alt='" + receptekTomb[item]['eleresi_ut'].slice(6,receptekTomb[item]['eleresi_ut'].length-4) + "' >\n\
+                            <p><b>ar</b>: "+receptekTomb[item]["ar"]+" Ft</p>\n\
+                           <p><b>db</b>: <input type='text' id='"+receptekTomb[item]["nev"]+"_db'></p>\n\
+                            <div id=gombok><input type='button' class='modosit' index='"+item+"' value='módosít'><input type='button' class='torol' index='"+item+"' value='töröl'></div>";
+                        $("article").append("<div id='"+receptekTomb[item]["nev"]+"'>"+etelekFelvet+"</div>");
 
-    for (var i = 0; i < receptekTomb.length; i++) {
-        $("article table").append("<tr id='"+i+"'>");
-        for (var item in receptekTomb[i]) {
-            if (item==="hozzavalok") {
-                $("article table tr").eq(i + 1).append("<td><ul id='"+i+"'></ul></td>");
-                for(var item2 in receptekTomb[i][item]){
-                    for (var item3 in receptekTomb[i][item][item2]) {
-                        $("article table tr td ul").eq(i).append("<li>" +item3+": "+ receptekTomb[i][item][item2][item3] + " </li");
-                    }                    
-                }
-            }
-            else{
-                $("article table tr").eq(i + 1).append("<td>" + receptekTomb[i][item] + " </td>");
-            }                      
-        }
+                        }
+
     }
     
-}
-
 function megjelenit(){
     var id=Number($(this).attr("id"));
     megjelenitRecept(id);
